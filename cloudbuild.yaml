@@ -1,0 +1,6 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/cloud-run-deploy-356923/cloud-run-tutorial$SHORT_SHA', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/cloud-run-deploy-356923/cloud-run-tutorial$SHORT_SHA']
+  
